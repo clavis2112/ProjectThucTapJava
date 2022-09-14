@@ -1,0 +1,72 @@
+.from-check,
+.form-check-radio {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.form-check {
+  padding-left: 0;
+  margin-bottom: .5rem;
+
+    .form-check-label{
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-left: 35px;
+        line-height: 26px;
+        margin-bottom: 0;
+    }
+
+    .form-check-sign::before,
+    .form-check-sign::after {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        cursor: pointer;
+        border-radius: 6px;
+        top: 0;
+        background-color: #AAA7A4;
+        -webkit-transition: opacity 0.3s linear;
+        -moz-transition: opacity 0.3s linear;
+        -o-transition: opacity 0.3s linear;
+        -ms-transition: opacity 0.3s linear;
+        transition: opacity 0.3s linear;
+    }
+    .form-check-sign::after {
+        font-family: 'FontAwesome';
+        content: "\f00c";
+        top: -1px;
+        text-align: center;
+        font-size: 15px;
+        opacity: 0;
+        color: #FFF;
+        border: 0;
+        background-color: inherit;
+    }
+    &.disabled{
+        .form-check-label{
+            color: $dark-gray;
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+
+}
+
+.form-check.disabled .form-check-label,
+.form-check.disabled .form-check-label {
+
+}
+
+.form-check input[type="checkbox"],
+.form-check-radio input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+}
+.form-check input[type="checkbox"]:checked + .form-check-sign::after{
+    opacity: 1;
+}
