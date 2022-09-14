@@ -1,0 +1,179 @@
+.fixed-plugin{
+    position: fixed;
+    right: 0;
+    width: 64px;
+    background: rgba(0,0,0,.3);
+    z-index: 1031;
+    border-radius: 8px 0 0 8px;
+    text-align: center;
+    top: 120px;
+
+    li > a,
+    .badge{
+        transition: all .34s;
+        -webkit-transition: all .34s;
+        -moz-transition: all .34s;
+    }
+
+    .fa-cog{
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 0 0 6px 6px;
+        width: auto;
+    }
+
+    .dropdown-menu{
+        right: 80px;
+        left: auto !important;
+        top: -52px !important;
+        width: 290px;
+        border-radius: 10px;
+        padding: 0 10px;
+    }
+
+    .dropdown .dropdown-menu .nc-icon{
+      top: 2px;
+      right: 10px;
+      font-size: 14px;
+    }
+
+    .dropdown-menu:after,
+    .dropdown-menu:before{
+        right: 10px;
+        margin-left: auto;
+        left: auto;
+    }
+
+    .fa-circle-thin{
+        color: #FFFFFF;
+    }
+
+    .active .fa-circle-thin{
+        color: #00bbff;
+    }
+
+    .dropdown-menu > .active > a,
+    .dropdown-menu > .active > a:hover,
+    .dropdown-menu > .active > a:focus{
+        color: #777777;
+        text-align: center;
+    }
+
+    img{
+        border-radius: 0;
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .dropdown-menu li > a:hover,
+    .dropdown-menu li > a:focus{
+        box-shadow: none;
+    }
+
+    .badge{
+        border: 3px solid #FFFFFF;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        height: 23px;
+        margin-right: 5px;
+        position: relative;
+        width: 23px;
+
+      &.badge-light {
+        border: 1px solid $light-gray;
+
+        &.active,
+        &:hover {
+          border: 3px solid #0bf;
+        }
+      }
+    }
+
+    .badge.active,
+    .badge:hover{
+        border-color: #00bbff;
+    }
+
+    .badge-blue{
+        background-color: $brand-info;
+    }
+    .badge-green{
+        background-color: $brand-success;
+    }
+    .badge-orange{
+        background-color: $brand-primary;
+    }
+    .badge-yellow{
+        background-color: $brand-warning;
+    }
+    .badge-red{
+        background-color: $brand-danger;
+    }
+
+    h5{
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .dropdown-menu li{
+        display: block;
+        padding: 15px 2px;
+        width: 25%;
+        float: left;
+    }
+
+    li.adjustments-line,
+    li.header-title,
+    li.button-container{
+        width: 100%;
+        height: 35px;
+        min-height: inherit;
+    }
+
+    li.button-container{
+        height: auto;
+
+        div{
+            margin-bottom: 5px;
+        }
+    }
+
+    #sharrreTitle{
+        text-align: center;
+        padding: 10px 0;
+        height: 50px;
+    }
+
+    li.header-title{
+        height: 30px;
+        line-height: 25px;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .adjustments-line{
+        p{
+            float: left;
+            display: inline-block;
+            margin-bottom: 0;
+            font-size: 1em;
+            color: #3C4858;
+        }
+
+        a{
+            color: transparent;
+
+            .badge-colors{
+                position: relative;
+                top: -2px;
+            }
+
+            a:hover,
+            a:focus{
+                color: transparent;
+            }
+        }
