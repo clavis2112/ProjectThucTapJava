@@ -1,0 +1,131 @@
+.navbar{
+    padding-top: $navbar-padding-base;
+    padding-bottom: $navbar-padding-base;
+    min-height: 53px;
+    margin-bottom: 20px;
+
+    a{
+        vertical-align: middle;
+
+        &:not(.btn):not(.dropdown-item){
+            color: $white-color;
+        }
+
+        &.dropdown-item{
+            color: $default-color;
+        }
+    }
+
+
+
+    &.bg-white{
+      .input-group .form-control,
+      .input-group.no-border .form-control{
+        color: $default-color;
+
+        @include placeholder(){
+          color: $default-color;
+        };
+      }
+      .input-group-prepend .input-group-text i,
+      .input-group-append .input-group-text i{
+        color: $default-color;
+        opacity: .5;
+      }
+    }
+
+    .form-group,
+    .input-group{
+      margin: 0;
+      margin-left: -3px;
+      margin-right: 5px;
+
+      .form-group-addon,
+      .input-group-prepend .input-group-text,
+      .input-group-append .input-group-text{
+        color: $default-color;
+
+        i {
+          opacity: 1;
+        }
+      }
+
+      &.no-border{
+        .form-control{
+          color: $default-color;
+
+          @include placeholder(){
+            color: $default-color;
+          };
+        }
+      }
+    }
+
+    p{
+        display: inline-block;
+        margin: 0;
+        line-height: 1.8em;
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    &.navbar-absolute{
+        position: absolute;
+        width: 100%;
+        padding-top: 10px;
+        z-index: 1029;
+    }
+
+    .documentation &{
+        &.fixed-top{
+            left: 0;
+            width: initial;
+        }
+    }
+
+    .navbar-wrapper{
+        display: inline-flex;
+        align-items: center;
+
+        .navbar-minimize{
+            padding-right: 10px;
+
+            .btn{
+                margin: 0;
+            }
+        }
+
+        .navbar-toggle{
+            .navbar-toggler{
+                padding-left: 0;
+            }
+
+            &:hover{
+                & .navbar-toggler-bar.bar2{
+                    width: 22px;
+                }
+            }
+        }
+    }
+
+
+
+    .navbar-nav{
+        &.navbar-logo{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 49px;
+            top: -4px;
+        }
+
+        .nav-link.btn{
+            padding: $padding-btn-vertical $padding-btn-horizontal;
+            &.btn-lg{
+                padding: $padding-large-vertical $padding-large-horizontal;
+            }
+            &.btn-sm{
+                padding: $padding-small-vertical $padding-small-horizontal;
+            }
+        }
