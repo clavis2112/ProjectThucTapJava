@@ -1,0 +1,159 @@
+@media screen and (max-width: 991px){
+
+    .navbar {
+      padding: 0;
+  
+      &.navbar-absolute {
+        padding-top: 0;
+      }
+  
+      .navbar-brand {
+        font-size: 16px;
+        margin-right: 0;
+      }
+    }
+  
+      .profile-photo .profile-photo-small{
+          margin-left: -2px;
+      }
+  
+      .button-dropdown{
+          display: none;
+      }
+  
+      #minimizeSidebar{
+          display: none;
+      }
+  
+      .navbar{
+          .container-fluid{
+              padding-right: 15px;
+              padding-left: 15px;
+          }
+  
+          .navbar-collapse{
+            .input-group{
+              margin: 0;
+              margin-top: 5px;
+            }
+          }
+  
+          .navbar-nav{
+              .nav-item:first-child{
+                margin-top: 10px;
+              }
+              .nav-item:not(:last-child){
+                  margin-bottom: 10px;
+              }
+          }
+  
+          .dropdown.show .dropdown-menu{
+              display: block;
+          }
+  
+          .dropdown .dropdown-menu{
+              display: none;
+          }
+  
+          .dropdown.show .dropdown-menu,
+          .dropdown .dropdown-menu{
+              border: 0;
+              transition: none;
+              -webkit-box-shadow: none;
+              width: auto;
+              margin: 0px 1rem;
+              margin-top: 0px;
+              box-shadow: none;
+              position: static;
+              padding-left: 10px;
+  
+              &:before{
+                  display: none;
+              }
+          }
+  
+          .dropdown-menu .dropdown-item:focus,
+          .dropdown-menu .dropdown-item:hover{
+              color: $white-color;
+          }
+  
+          &.bg-white .dropdown-menu .dropdown-item:focus,
+          &.bg-white .dropdown-menu .dropdown-item:hover{
+              color: $default-color;
+          }
+  
+          .navbar-toggler-bar{
+              display: block;
+              position: relative;
+              width: 22px;
+              height: 1px;
+              border-radius: 1px;
+              background: $default-color;
+  
+              & + .navbar-toggler-bar{
+                  margin-top: 7px;
+              }
+  
+              & + .navbar-toggler-bar.navbar-kebab{
+                  margin-top: 3px;
+              }
+  
+              &.bar2{
+                  width: 17px;
+                  transition: width .2s linear;
+              }
+          }
+  
+          &.bg-white:not(.navbar-transparent) .navbar-toggler-bar{
+              background-color: $default-color;
+          }
+  
+          & .toggled .navbar-toggler-bar{
+              width: 24px;
+  
+              & + .navbar-toggler-bar{
+                  margin-top: 5px;
+              }
+          }
+  
+      }
+  
+      .wrapper{
+          @include transition (0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+      }
+  
+      .nav-open{
+          .main-panel{
+              right: 0;
+              @include transform-translate-x(260px);
+          }
+  
+          .sidebar{
+              @include transform-translate-x(0px);
+          }
+  
+          body{
+              position: relative;
+              overflow-x: hidden;
+          }
+  
+          .menu-on-right{
+              .main-panel{
+                  @include transform-translate-x(-260px);
+              }
+  
+              .navbar-collapse,
+              .sidebar{
+                  @include transform-translate-x(0px);
+              }
+  
+              .navbar-translate{
+                  @include transform-translate-x(-300px);
+              }
+  
+              #bodyClick{
+                  right: 260px;
+                  left: auto;
+              }
+          }
+      }
