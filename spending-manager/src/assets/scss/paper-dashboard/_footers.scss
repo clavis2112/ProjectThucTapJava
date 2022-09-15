@@ -1,0 +1,25 @@
+a{
+    color: inherit;
+    padding: $padding-base-vertical;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+}
+}
+
+.copyright{
+font-size: $font-size-small;
+line-height: 1.8;
+}
+
+&:after{
+display: table;
+clear: both;
+content: " ";
+}
+}
