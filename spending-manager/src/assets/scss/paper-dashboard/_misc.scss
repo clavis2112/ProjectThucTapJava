@@ -1,0 +1,35 @@
+// badge color
+
+.badge{
+    &.badge-default{
+        @include badge-color($default-color);
+    }
+    &.badge-primary{
+        @include badge-color($primary-color);
+    }
+    &.badge-info{
+        @include badge-color($info-color);
+    }
+    &.badge-success{
+        @include badge-color($success-color);
+    }
+    &.badge-warning{
+        @include badge-color($warning-color);
+    }
+    &.badge-danger{
+        @include badge-color($danger-color);
+    }
+    &.badge-neutral{
+        @include badge-color($white-color);
+        color: inherit;
+    }
+  }
+  
+  .card-user {
+    form {
+      .form-group {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
